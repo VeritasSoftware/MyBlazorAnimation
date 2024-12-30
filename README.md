@@ -1,8 +1,10 @@
 ﻿# MyBlazorAnimation library
 
+### Commonly used animations for Blazor applications
+
 ### Targeting .NET 8/9
 
-This library is a Blazor library that provides a component to create animations in Blazor applications.
+This library is a Blazor library that provides a component to create commonly used animations in Blazor applications.
 
 ![MyBlazorAnimation Demo](MyBlazorAnimationDemo.gif)
 
