@@ -4,6 +4,8 @@
 
 This library is a Blazor library that provides a component to create animations in Blazor applications.
 
+![MyBlazorAnimation Demo](MyBlazorAnimationDemo.gif)
+
 ## Installation
 
 You can install the library via NuGet package manager.
