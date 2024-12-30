@@ -1,0 +1,63 @@
+﻿@using Microsoft.JSInterop
+
+@inject IJSRuntime JSRuntime
+@inject IAnimationJSLoader AnimationJSLoader
+
+<style type="text/css">    
+    :root {
+    --durationInSeconds: @(DurationInSeconds + "s");
+    }  
+</style>
+
+<div class="animationContainer">
+    <div id="@Id" class="hidden slide-left">
+        @ChildContent
+    </div>
+</div>
+
+@code {
+    public const string fadeIn = "fade-in";
+    public const string fadeOut = "fade-out";
+    public const string fadeInOut = "fade-in-out";
+    public const string fadeOutIn = "fade-out-in";
+    public const string slideUp = "slide-up";
+    public const string slideDown = "slide-down";
+    public const string slideLeft = "slide-left";
+    public const string slideRight = "slide-right";
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public string Animation { get; set; } = string.Empty;
+
+    [Parameter]
+    public double DurationInSeconds { get; set; } = 3;
+
+    [Parameter]
+    public string Id { get; set; } = string.Empty;
+
+    [Parameter]
+    public bool IsManualTrigger { get; set; } = false;
+
+    public async Task TriggerAnimationBeginAsync()
+    {
+        await AnimationJSLoader.HideContentAsync(this.Id);
+    }
+
+    public async Task TriggerAnimationAsync()
+    {
+        await AnimationJSLoader.TriggerAnimationAsync(this.Id, this.Animation);
+    }
+
+    public async Task TriggerAnimationNowAsync()
+    {
+        await AnimationJSLoader.TriggerAnimationAsync(this.Id, this.Animation);
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!this.IsManualTrigger)
+            await AnimationJSLoader.TriggerAnimationAsync(this.Id, this.Animation);
+    }
+}

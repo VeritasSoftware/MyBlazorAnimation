@@ -1,0 +1,147 @@
+﻿/*.slide-right, .slide-left, .fade-in, .fade-out, .fade-out-in {
+    width: 100%;
+}*/
+
+.slide-up {
+    animation: var(--durationInSeconds) slide-up;
+    animation-fill-mode: forwards;
+}
+
+.slide-down {
+    animation: var(--durationInSeconds) slide-down;
+    animation-fill-mode: forwards;
+}
+
+.slide-right {
+    animation: var(--durationInSeconds) slide-right;
+    animation-fill-mode: forwards;
+}
+
+.slide-left {
+    animation: var(--durationInSeconds) slide-left;
+    animation-fill-mode: forwards;
+}
+
+.fade-in {
+    animation: var(--durationInSeconds) fade-in ease-in;
+    animation-fill-mode: forwards;
+}
+
+.fade-out {
+    animation: var(--durationInSeconds) fade-out ease-out;
+    animation-fill-mode: forwards;
+}
+
+.fade-out-in {
+    animation: var(--durationInSeconds) fade-out-in ease;
+    animation-fill-mode: forwards;
+}
+
+.fade-in-out {
+    animation: var(--durationInSeconds) fade-in-out ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-down {
+    0% {
+        margin-top: -100%;
+    }
+
+    100% {
+        margin-top: 0%;
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        margin-top: 100%;
+    }
+
+    100% {
+        margin-top: 0%;
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        margin-left: -100%;
+    }
+
+    100% {
+        margin-left: 0%;
+    }
+}
+
+/***** Slide Left *****/
+
+@keyframes slide-left {
+    0% {
+        margin-left: 100%;
+    }
+
+    100% {
+        margin-left: 0%;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-out-in {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.animationContainer {
+    width: 100%;
+    margin: auto;
+    background: #fff;
+    padding: 3px;
+    overflow: hidden;
+    margin-top: 3px;
+}
+
+.hidden {
+    display: none;
+    transform: translateY(100%);
+}
