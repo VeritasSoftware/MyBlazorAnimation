@@ -6,14 +6,19 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>MyBlazorAnimation</Title>
-    <Description>Blazor Animations Library</Description>
+	<Summary>Blazor library provides commonly used animations. Supports .NET 8/9.</Summary>
+    <Description>Blazor library provides commonly used animations. Supports .NET 8/9.</Description>
     <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<Authors>Shantanu</Authors>
+	<Version>1.0.0</Version>
+	<PackageId>MyBlazorAnimation</PackageId>
+	<PackageProjectUrl>https://github.com/VeritasSoftware/MyBlazorAnimation</PackageProjectUrl>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="README.md" />
-  </ItemGroup>
-
+    <ItemGroup>
+	    <None Include="README.md" Pack="true" PackagePath=""/>
+    </ItemGroup>
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
