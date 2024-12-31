@@ -1,6 +1,6 @@
-﻿/*.slide-right, .slide-left, .fade-in, .fade-out, .fade-out-in {
+﻿.slide-up, .slide-down, .slide-right, .slide-left, .fade-in, .fade-out, .fade-in-out, .fade-out-in {
     width: 100%;
-}*/
+}
 
 .slide-up {
     animation: var(--durationInSeconds) slide-up;
