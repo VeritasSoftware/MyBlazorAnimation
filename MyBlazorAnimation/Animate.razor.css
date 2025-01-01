@@ -3,42 +3,42 @@
 }
 
 .slide-up {
-    animation: var(--durationInSeconds) slide-up;
+    animation: var(--durationInSeconds) slide-up var(--iterationCount);
     animation-fill-mode: forwards;
 }
 
 .slide-down {
-    animation: var(--durationInSeconds) slide-down;
+    animation: var(--durationInSeconds) slide-down var(--iterationCount);
     animation-fill-mode: forwards;
 }
 
 .slide-right {
-    animation: var(--durationInSeconds) slide-right;
+    animation: var(--durationInSeconds) slide-right var(--iterationCount);
     animation-fill-mode: forwards;
 }
 
 .slide-left {
-    animation: var(--durationInSeconds) slide-left;
+    animation: var(--durationInSeconds) slide-left var(--iterationCount);
     animation-fill-mode: forwards;
 }
 
 .fade-in {
-    animation: var(--durationInSeconds) fade-in ease-in;
+    animation: var(--durationInSeconds) fade-in ease-in var(--iterationCount);
     animation-fill-mode: forwards;
 }
 
 .fade-out {
-    animation: var(--durationInSeconds) fade-out ease-out;
+    animation: var(--durationInSeconds) fade-out ease-out var(--iterationCount);
     animation-fill-mode: forwards;
 }
 
 .fade-out-in {
-    animation: var(--durationInSeconds) fade-out-in ease;
+    animation: var(--durationInSeconds) fade-out-in ease var(--iterationCount);
     animation-fill-mode: forwards;
 }
 
 .fade-in-out {
-    animation: var(--durationInSeconds) fade-in-out ease-in-out;
+    animation: var(--durationInSeconds) fade-in-out ease-in-out var(--iterationCount);
     animation-fill-mode: forwards;
 }
 

@@ -6,6 +6,7 @@
 <style type="text/css">    
     :root {
         --durationInSeconds: @(DurationInSeconds + "s");
+        --iterationCount: @_iterationCount;
     }  
 </style>
 
@@ -25,6 +26,8 @@
     public const string slideLeft = "slide-left";
     public const string slideRight = "slide-right";
 
+    private string _iterationCount = "1";
+
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
 
@@ -33,6 +36,22 @@
 
     [Parameter]
     public double DurationInSeconds { get; set; } = 3;
+
+    [Parameter]
+    public int IterationCount 
+    {
+        get
+        {
+            return int.Parse(_iterationCount);
+        }
+        set
+        {
+            if (value <= 0)
+                _iterationCount = "infinite";
+            else
+                _iterationCount = value.ToString();
+        } 
+    }
 
     [Parameter]
     public string Id { get; set; } = string.Empty;

@@ -35,14 +35,21 @@ The supported animations are:
 Eg. to animate sliding from right to left, you can use the `Animate` component with the `slideLeft` animation.
 
 ```html
-<Animate Id="myPageAnimation" Animation="@Animate.slideLeft" DurationInSeconds="1">
+<Animate Id="myPageAnimation" 
+         Animation="@Animate.slideLeft" 
+         DurationInSeconds="1"
+         IterationCount="3">
     <div>My page content</div>
 </Animate>
 ```
 
 You can have any markup inside the `Animate` component. The `Animate` component will animate the content based on the animation specified.
 
-This animation will fire automatically when the component is rendered. 
+Set the IterationCount to 1 or more to play the animation only once or more. Default is 1. Set it to 0 to play the animation infinitely.
+
+This animation will fire automatically when the component is rendered.
+
+### Triggering animation manually
 
 If you want to trigger the animation manually in code, you can set the `IsManualTrigger` property to `true`.
 
@@ -74,3 +81,12 @@ And, use a component instance reference (`@ref`) to call the `TriggerAnimationBe
 ```
 
 Another method to trigger the animation instantly is `TriggerAnimationNowAsync`.
+
+| Property | Description |
+| --- | --- |
+| Id | Unique identifier for the animation. |
+| Animation | The animation to apply. |
+| DurationInSeconds | The duration of the animation in seconds. Default is 1. |
+| IterationCount | The number of times the animation should play. Default is 1. |
+| IsManualTrigger | Set to true to trigger the animation manually. Default is false. |
+| @ref | Component instance reference to call the `TriggerAnimationBeginAsync`, `TriggerAnimationAsync` & `TriggerAnimationNowAsync` methods. |
