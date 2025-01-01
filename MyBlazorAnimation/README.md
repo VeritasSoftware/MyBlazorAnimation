@@ -4,7 +4,7 @@
 
 ### Targeting .NET 8/9
 
-This library is a Blazor library that provides a component to create commonly used animations in Blazor applications.
+This light-weight Blazor library provides a component to create commonly used animations in Blazor applications.
 
 ## Installation
 
