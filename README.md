@@ -39,11 +39,11 @@ The supported animations are:
 Eg. to animate sliding from right to left, you can use the `Animate` component with the `slideLeft` animation.
 
 ```html
-<Animate Id="myPageAnimation" 
+<Animate Id="myAnimation" 
          Animation="@Animate.slideLeft" 
          DurationInSeconds="3"
          IterationCount="3">
-    <div>My page content</div>
+    <div>My content</div>
 </Animate>
 ```
 
@@ -68,7 +68,6 @@ And, use a component instance reference (`@ref`) to call the `TriggerAnimationBe
     <div>My search results content</div>
 </Animate>
 ```
-
 ```csharp
 @code {
     private Animate searchResultsAnimation;
@@ -105,13 +104,11 @@ Eg. say your custom animation is `slide-right-left``.
 Just enter the animation name in the `Animation` property.
 
 ```html
-<Animate Id="myPageAnimation" 
+<Animate Id="myAnimation" 
             Animation="slide-right-left"
             DurationInSeconds="3" 
             IterationCount="0">
-    <article class="content px-4">
-        @Body
-    </article>
+    <div>My content</div>
 </Animate>
 ```
 
