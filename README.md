@@ -39,7 +39,7 @@ Eg. to animate sliding from right to left, you can use the `Animate` component w
 ```html
 <Animate Id="myPageAnimation" 
          Animation="@Animate.slideLeft" 
-         DurationInSeconds="1"
+         DurationInSeconds="3"
          IterationCount="3">
     <div>My page content</div>
 </Animate>
