@@ -128,17 +128,14 @@ The CSS for the custom animation should be defined in your application's CSS fil
 @keyframes slide-right-left {
     0% {
         margin-left: -100%;
-        margin-right: -100%;
     }
 
     50% {
         margin-left: 0%;
-        margin-right: 0%;
     }
 
     100% {
         margin-left: -100%;
-        margin-right: -100%;
     }
 }
 ```
