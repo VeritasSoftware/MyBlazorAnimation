@@ -138,3 +138,5 @@ The CSS for the custom animation should be defined in your application's CSS fil
 ```
 
 You can use the `--durationInSeconds` and `--iterationCount` CSS variables to set the duration and iteration count for the custom animation.
+
+These CSS variables will be set by the `Animate` component based on the `DurationInSeconds` and `IterationCount` properties.
