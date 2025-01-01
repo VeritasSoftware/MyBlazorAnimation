@@ -2,6 +2,8 @@
 
 ### Commonly used animations for Blazor applications
 
+### Run your custom animations too
+
 ### Targeting .NET 8/9
 
 This light-weight Blazor library provides a component to create commonly used animations in Blazor applications.
@@ -90,3 +92,56 @@ Another method to trigger the animation instantly is `TriggerAnimationNowAsync`.
 | IterationCount | The number of times the animation should play. Default is 1. 0 for infinite. |
 | IsManualTrigger | Set to true to trigger the animation manually. Default is false. |
 | @ref | Component instance reference to call the `TriggerAnimationBeginAsync`, `TriggerAnimationAsync` & `TriggerAnimationNowAsync` methods. |
+
+
+## Run Custom Animation
+
+You can also run custom animations using the `Animate` component.
+
+Eg. say your custom animation is `slide-right-left``.
+
+Just enter the animation name in the `Animation` property.
+
+```html
+<Animate Id="myPageAnimation" 
+            Animation="slide-right-left"
+            DurationInSeconds="3" 
+            IterationCount="0">
+    <article class="content px-4">
+        @Body
+    </article>
+</Animate>
+```
+
+In the above example, the `slide-right-left` animation will be applied to the content inside the `Animate` component.
+
+The CSS for the custom animation should be defined in your application's CSS file.
+```css
+.slide-right-left {
+    width: 100%;
+}
+
+.slide-right-left {
+    animation: var(--durationInSeconds) slide-right-left var(--iterationCount);
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-right-left {
+    0% {
+        margin-left: -100%;
+        margin-right: -100%;
+    }
+
+    50% {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    100% {
+        margin-left: -100%;
+        margin-right: -100%;
+    }
+}
+```
+
+You can use the `--durationInSeconds` and `--iterationCount` CSS variables to set the duration and iteration count for the custom animation.
