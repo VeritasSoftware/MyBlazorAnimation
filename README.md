@@ -99,7 +99,7 @@ Another method to trigger the animation instantly is `TriggerAnimationNowAsync`.
 
 You can also run custom animations using the `Animate` component.
 
-Eg. say your custom animation is `slide-right-left``.
+Eg. say your custom animation is `slide-right-left`.
 
 Just enter the animation name in the `Animation` property.
 
