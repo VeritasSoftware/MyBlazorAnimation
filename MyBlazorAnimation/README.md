@@ -103,9 +103,9 @@ Just enter the animation name in the `Animation` property.
 
 ```html
 <Animate Id="myAnimation" 
-            Animation="slide-right-left"
-            DurationInSeconds="3" 
-            IterationCount="0">
+         Animation="slide-right-left"
+         DurationInSeconds="3" 
+         IterationCount="0">
     <div>My content</div>
 </Animate>
 ```
