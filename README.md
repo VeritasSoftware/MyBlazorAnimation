@@ -89,6 +89,6 @@ Another method to trigger the animation instantly is `TriggerAnimationNowAsync`.
 | Id | Unique identifier for the animation. |
 | Animation | The animation to apply. |
 | DurationInSeconds | The duration of the animation in seconds. Default is 1. |
-| IterationCount | The number of times the animation should play. Default is 1. |
+| IterationCount | The number of times the animation should play. Default is 1. 0 for infinite. |
 | IsManualTrigger | Set to true to trigger the animation manually. Default is false. |
 | @ref | Component instance reference to call the `TriggerAnimationBeginAsync`, `TriggerAnimationAsync` & `TriggerAnimationNowAsync` methods. |
