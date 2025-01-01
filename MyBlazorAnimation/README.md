@@ -115,12 +115,9 @@ In the above example, the `slide-right-left` animation will be applied to the co
 The CSS for the custom animation should be defined in your application's CSS file.
 ```css
 .slide-right-left {
-    width: 100%;
-}
-
-.slide-right-left {
     animation: var(--durationInSeconds) slide-right-left var(--iterationCount);
     animation-fill-mode: forwards;
+    width: 100%;
 }
 
 @keyframes slide-right-left {

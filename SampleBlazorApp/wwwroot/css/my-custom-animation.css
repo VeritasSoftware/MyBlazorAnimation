@@ -1,10 +1,7 @@
 ﻿.slide-right-left {
-    width: 100%;
-}
-
-.slide-right-left {
     animation: var(--durationInSeconds) slide-right-left var(--iterationCount);
     animation-fill-mode: forwards;
+    width: 100%;
 }
 
 @keyframes slide-right-left {
