@@ -26,11 +26,38 @@ Then, you can use the provided `Animate` component in your Blazor components.
 
 The supported animations are:
 
-|  |  |  |  |
-|--|--|--|--|
-| bounce | bounceIn | fadeIn | fadeOut | fadeInOut |
-| fadeOutIn | flip | shake | slideUp | slideDown |
-| slideLeft | slideRight | swing | wobble |  |
+<table border="0">
+ <tr>
+    <td>
+<ul>
+<li>bounce</li>
+<li>bounceIn</li>
+<li>fadeIn</li>
+<li>fadeOut</li>
+<li>fadeInOut</li>
+<li>fadeOutIn</li>
+<li>flip</li>
+</ul>
+* slideUp
+* slideDown
+* slideLeft
+* slideRight
+* swing
+* wobble
+    </td>
+    <td>
+<ul>
+<li>shake</li>
+<li>slideUp</li>
+<li>slideDown</li>
+<li>slideLeft</li>
+<li>slideRight</li>
+<li>swing</li>
+<li>wobble</li>
+</ul>
+    </td>
+ </tr>
+</table>
 
 Eg. to animate sliding from right to left, you can use the `Animate` component with the `slideLeft` animation.
 
