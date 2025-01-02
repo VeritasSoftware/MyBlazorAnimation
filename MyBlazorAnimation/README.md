@@ -38,12 +38,6 @@ The supported animations are:
 <li>fadeOutIn</li>
 <li>flip</li>
 </ul>
-* slideUp
-* slideDown
-* slideLeft
-* slideRight
-* swing
-* wobble
     </td>
     <td>
 <ul>
