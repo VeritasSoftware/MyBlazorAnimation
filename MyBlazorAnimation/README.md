@@ -30,7 +30,7 @@ The supported animations are:
 |--|--|--|--|
 | bounce | bounceIn | fadeIn | fadeOut | fadeInOut |
 | fadeOutIn | flip | shake | slideUp | slideDown |
-| slideLeft | slideRight | swing | wobble |
+| slideLeft | slideRight | swing | wobble |  |
 
 Eg. to animate sliding from right to left, you can use the `Animate` component with the `slideLeft` animation.
 
