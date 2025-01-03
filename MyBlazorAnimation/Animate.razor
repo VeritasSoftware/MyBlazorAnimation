@@ -60,6 +60,9 @@
     }
 
     [Parameter]
+    public Func<Task>? OnAnimationTriggered { get; set; }
+
+    [Parameter]
     public string Id { get; set; } = string.Empty;
 
     [Parameter]
@@ -72,17 +75,25 @@
 
     public async Task TriggerAnimationAsync()
     {
-        await AnimationJSLoader.TriggerAnimationAsync(this.Id, this.Animation);
+        await TriggerAsync();
     }
 
     public async Task TriggerAnimationNowAsync()
     {
+        await TriggerAsync();
+    }
+
+    private async Task TriggerAsync()
+    {
         await AnimationJSLoader.TriggerAnimationAsync(this.Id, this.Animation);
+
+        if (this.OnAnimationTriggered != null)
+            await this.OnAnimationTriggered.Invoke();
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (!this.IsManualTrigger)
-            await AnimationJSLoader.TriggerAnimationAsync(this.Id, this.Animation);
+            await TriggerAsync();
     }
 }

@@ -14,7 +14,8 @@
         <Animate Id="myPageAnimation" 
                  Animation="@Animate.slideLeft" 
                  DurationInSeconds="1" 
-                 IterationCount="0">
+                 IterationCount="0"
+                 OnAnimationTriggered="@(async () => Console.WriteLine("Animation Triggered"))">
             <article class="content px-4">
                 @Body
             </article>

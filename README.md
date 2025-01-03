@@ -28,8 +28,6 @@ Then, you can use the provided `Animate` component in your Blazor components.
 
 The supported animations are:
 
-
-
 <table border="0">
  <tr>
     <td>
@@ -63,7 +61,8 @@ Eg. to animate sliding from right to left, you can use the `Animate` component w
 <Animate Id="myAnimation" 
          Animation="@Animate.slideLeft" 
          DurationInSeconds="3"
-         IterationCount="3">
+         IterationCount="3"
+         OnAnimationTriggered="@(async () => Console.WriteLine("Animation Triggered"))>
     <div>My content</div>
 </Animate>
 ```
@@ -112,6 +111,7 @@ Another method to trigger the animation instantly is `TriggerAnimationNowAsync`.
 | Animation | The animation to apply. |
 | DurationInSeconds | The duration of the animation in seconds. Default is 1. Accepts fractions. |
 | IterationCount | The number of times the animation should play. Default is 1. 0 for infinite. |
+| OnAnimationTriggered | The event is fired after the animation has been triggered. |
 | IsManualTrigger | Set to true to trigger the animation manually. Default is false. |
 | @ref | Component instance reference to call the `TriggerAnimationBeginAsync`, `TriggerAnimationAsync` & `TriggerAnimationNowAsync` methods. |
 
