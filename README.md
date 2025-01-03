@@ -77,7 +77,9 @@ This animation will fire automatically when the component is rendered.
 
 If you want to trigger the animation manually in code, you can set the `IsManualTrigger` property to `true`.
 
-And, use a component instance reference (`@ref`) to call the `TriggerAnimationBeginAsync` & `TriggerAnimationAsync` methods.
+And, use a component instance reference (`@ref`) to call the `TriggerAnimationBeginAsync`, `TriggerAnimationAsync` & `TriggerAnimationNowAsync` methods.
+
+For eg. When the Search button is clicked, `OnClick` event is fired. The `SearchAsync` event handler method is called which triggers the animation.
 
 ```html
 <Animate Id="mySearchResultsAnimation" 
@@ -91,7 +93,8 @@ And, use a component instance reference (`@ref`) to call the `TriggerAnimationBe
 ```csharp
 @code {
     private Animate searchResultsAnimation;
-    private async Task Search()
+
+    private async Task SearchAsync(MouseEventArgs e)
     {        
         await searchResultsAnimation.TriggerAnimationBeginAsync();
 
@@ -102,8 +105,6 @@ And, use a component instance reference (`@ref`) to call the `TriggerAnimationBe
     }
 }
 ```
-
-Another method to trigger the animation instantly is `TriggerAnimationNowAsync`.
 
 | Property | Description |
 | --- | --- |
