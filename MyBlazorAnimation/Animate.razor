@@ -7,11 +7,12 @@
     :root {
         --durationInSeconds: @(DurationInSeconds + "s");
         --iterationCount: @_iterationCount;
+        --delayInSeconds: @(DelayInSeconds + "s");
     }  
 </style>
 
 <div class="animationContainer">
-    <div id="@Id" class="hidden slide-left">
+    <div id="@Id" class="hidden">
         @ChildContent
     </div>
 </div>
@@ -42,6 +43,9 @@
 
     [Parameter]
     public double DurationInSeconds { get; set; } = 1;
+
+    [Parameter]
+    public double DelayInSeconds { get; set; } = 0;
 
     [Parameter]
     public int IterationCount 

@@ -1,5 +1,5 @@
 ﻿.slide-right-left {
-    animation: var(--durationInSeconds) slide-right-left var(--iterationCount);
+    animation: var(--durationInSeconds) slide-right-left var(--iterationCount) var(--delayInSeconds);
     animation-fill-mode: forwards;
     width: 100%;
 }

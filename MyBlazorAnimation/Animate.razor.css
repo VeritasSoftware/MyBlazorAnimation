@@ -3,75 +3,74 @@
 }
 
 .slide-up {
-    animation: var(--durationInSeconds) slide-up var(--iterationCount);
+    animation: var(--durationInSeconds) slide-up var(--iterationCount) var(--delayInSeconds);
     animation-fill-mode: forwards;
 }
 
 .slide-down {
-    animation: var(--durationInSeconds) slide-down var(--iterationCount);
+    animation: var(--durationInSeconds) slide-down var(--iterationCount) var(--delayInSeconds);
     animation-fill-mode: forwards;
 }
 
 .slide-right {
-    animation: var(--durationInSeconds) slide-right var(--iterationCount);
+    animation: var(--durationInSeconds) slide-right var(--iterationCount) var(--delayInSeconds);
     animation-fill-mode: forwards;
 }
 
 .slide-left {
-    animation: var(--durationInSeconds) slide-left var(--iterationCount);
+    animation: var(--durationInSeconds) slide-left var(--iterationCount) var(--delayInSeconds);
     animation-fill-mode: forwards;
 }
 
 .fade-in {
-    animation: var(--durationInSeconds) fade-in ease-in var(--iterationCount);
+    animation: var(--durationInSeconds) fade-in ease-in var(--iterationCount) var(--delayInSeconds);
     animation-fill-mode: forwards;
 }
 
 .fade-out {
-    animation: var(--durationInSeconds) fade-out ease-out var(--iterationCount);
+    animation: var(--durationInSeconds) fade-out ease-out var(--iterationCount) var(--delayInSeconds);
     animation-fill-mode: forwards;
 }
 
 .fade-out-in {
-    animation: var(--durationInSeconds) fade-out-in ease var(--iterationCount);
+    animation: var(--durationInSeconds) fade-out-in ease var(--iterationCount) var(--delayInSeconds);
     animation-fill-mode: forwards;
 }
 
 .fade-in-out {
-    animation: var(--durationInSeconds) fade-in-out ease-in-out var(--iterationCount);
+    animation: var(--durationInSeconds) fade-in-out ease-in-out var(--iterationCount) var(--delayInSeconds);
     animation-fill-mode: forwards;
 }
 
 .flip {
-    animation: var(--durationInSeconds) flip var(--iterationCount);
+    animation: var(--durationInSeconds) flip var(--iterationCount) var(--delayInSeconds);
     animation-fill-mode: forwards;
     backface-visibility: visible !important;
 }
 
 .bounce {
-    animation: var(--durationInSeconds) bounce ease-in-out var(--iterationCount);
+    animation: var(--durationInSeconds) bounce ease-in-out var(--iterationCount) var(--delayInSeconds);
     animation-fill-mode: forwards;
 }
 
 .bounce-in {
-
-    animation: var(--durationInSeconds) bounce-in ease-in-out var(--iterationCount);
+    animation: var(--durationInSeconds) bounce-in ease-in-out var(--iterationCount) var(--delayInSeconds);
     animation-fill-mode: forwards;
 }
 
 .shake {
-    animation: var(--durationInSeconds) shake ease-in-out var(--iterationCount);
+    animation: var(--durationInSeconds) shake ease-in-out var(--iterationCount) var(--delayInSeconds);
     animation-fill-mode: forwards;
 }
 
 .swing {
-    animation: var(--durationInSeconds) swing ease-in-out var(--iterationCount);
+    animation: var(--durationInSeconds) swing ease-in-out var(--iterationCount) var(--delayInSeconds);
     animation-fill-mode: forwards;
     transform-origin: top center;
 }
 
 .wobble {
-    animation: var(--durationInSeconds) wobble ease-in-out var(--iterationCount);
+    animation: var(--durationInSeconds) wobble ease-in-out var(--iterationCount) var(--delayInSeconds);
     animation-fill-mode: forwards;
 }
 
@@ -314,6 +313,5 @@
 }
 
 .hidden {
-    display: none;
-    transform: translateY(100%);
+    display: none!important;
 }

@@ -60,6 +60,7 @@ Eg. to animate sliding from right to left, you can use the `Animate` component w
          Animation="@Animate.slideLeft" 
          DurationInSeconds="3"
          IterationCount="3"
+         DelayInSeconds="1"
          OnAnimationTriggered="@(async () => Console.WriteLine("Animation Triggered"))>
     <div>My content</div>
 </Animate>
@@ -104,12 +105,15 @@ For eg. When the Search button is clicked, `OnClick` event is fired. The `Search
 }
 ```
 
+### Animate component properties
+
 | Property | Description |
 | --- | --- |
 | Id | Unique identifier for the animation. |
 | Animation | The animation to apply. |
 | DurationInSeconds | The duration of the animation in seconds. Default is 1. Accepts fractions. |
 | IterationCount | The number of times the animation should play. Default is 1. 0 for infinite. |
+| DelayInSeconds | The delay (in seconds) before the animation starts. Default is 0. Accepts fractions|
 | OnAnimationTriggered | The event is fired after the animation has been triggered. |
 | IsManualTrigger | Set to true to trigger the animation manually. Default is false. |
 | @ref | Component instance reference to call the `TriggerAnimationBeginAsync`, `TriggerAnimationAsync` & `TriggerAnimationNowAsync` methods. |
@@ -137,7 +141,7 @@ In the above example, the `slide-right-left` animation will be applied to the co
 The CSS for the custom animation should be defined in your application's CSS file.
 ```css
 .slide-right-left {
-    animation: var(--durationInSeconds) slide-right-left var(--iterationCount);
+    animation: var(--durationInSeconds) slide-right-left var(--iterationCount) var(--delayInSeconds);
     animation-fill-mode: forwards;
     width: 100%;
 }
@@ -157,6 +161,6 @@ The CSS for the custom animation should be defined in your application's CSS fil
 }
 ```
 
-You can use the `--durationInSeconds` and `--iterationCount` CSS variables to set the duration and iteration count for the custom animation.
+You can use the `--durationInSeconds`, `--iterationCount` and `--delayInSeconds` CSS variables to set the duration, iteration count and delay for the custom animation.
 
-These CSS variables will be set by the `Animate` component based on the `DurationInSeconds` and `IterationCount` properties.
+These CSS variables will be set by the `Animate` component based on it's `DurationInSeconds`, `IterationCount` and `DelayInSeconds` properties.
