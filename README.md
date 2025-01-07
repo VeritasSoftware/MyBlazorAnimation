@@ -2,7 +2,7 @@
 
 ### Commonly used animations for Blazor applications
 
-### Run your custom animations too
+### Run any custom industry standard animation
 
 ### Targeting .NET 8/9
 
@@ -115,13 +115,13 @@ For eg. When the Search button is clicked, `OnClick` event is fired. The `Search
 | Animation | The animation to apply. |
 | DurationInSeconds | The duration of the animation in seconds. Default is 1. Accepts fractions. |
 | IterationCount | The number of times the animation should play. Default is 1. 0 for infinite. |
-| DelayInSeconds | The delay (in seconds) before the animation starts. Default is 0. Accepts fractions|
+| DelayInSeconds | The delay (in seconds) before the animation starts. Default is 0. Accepts fractions.|
 | OnAnimationTriggered | The event is fired after the animation has been triggered. |
 | IsManualTrigger | Set to true to trigger the animation manually. Default is false. |
 | @ref | Component instance reference to call the `TriggerAnimationBeginAsync`, `TriggerAnimationAsync` & `TriggerAnimationNowAsync` methods. |
 
 
-## Run Custom Animation
+## Run any custom industry standard animation
 
 You can also run custom animations using the `Animate` component.
 
@@ -142,6 +142,8 @@ In the above example, the `slide-right-left` animation will be applied to the co
 
 The CSS for the custom animation should be defined in your application's CSS file.
 ```css
+/* Custom industry standard animation */
+
 .slide-right-left {
     animation: var(--durationInSeconds) slide-right-left var(--iterationCount) var(--delayInSeconds);
     animation-fill-mode: forwards;
