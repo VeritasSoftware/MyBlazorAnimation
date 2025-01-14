@@ -5,9 +5,9 @@
 
 <style type="text/css">    
     :root {
-        --durationInSeconds: @(DurationInSeconds + "s");
-        --iterationCount: @_iterationCount;
-        --delayInSeconds: @(DelayInSeconds + "s");
+    --durationInSeconds: @(DurationInSeconds + "s");
+    --iterationCount: @_iterationCount;
+    --delayInSeconds: @(DelayInSeconds + "s");
     }  
 </style>
 
@@ -79,12 +79,36 @@
 
     public async Task TriggerAnimationAsync()
     {
-        await TriggerAsync();
+        if (this.IsManualTrigger)
+            await TriggerAsync();
     }
 
     public async Task TriggerAnimationNowAsync()
     {
         await TriggerAsync();
+    }
+
+    public async Task TriggerAnimationDynamicAsync(AnimateSettings settings)
+    {
+        this.ClearAnimation();        
+
+        await AnimationJSLoader.SetAnimatePropertesAsync(settings);
+
+        this.Animation = settings.Animation;
+        this.IsManualTrigger = true;
+        this.DelayInSeconds = settings.DelayInSeconds;
+        this.DurationInSeconds = settings.DurationInSeconds;
+        this.IterationCount = settings.IterationCount;
+
+        await TriggerAsync();
+    }
+
+    private void ClearAnimation()
+    {
+        this.Animation = string.Empty;
+        this.DelayInSeconds = 0;
+        this.DurationInSeconds = 1;
+        this.IterationCount = 1;
     }
 
     private async Task TriggerAsync()

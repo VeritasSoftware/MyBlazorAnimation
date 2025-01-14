@@ -21,3 +21,17 @@ export function hideContent(id) {
         }, 0);        
     }
 }
+
+export function setAnimatePropertes(settings) {
+    const root = document.querySelector(':root');
+
+    if (settings.durationInSeconds != undefined) {
+        root.style.setProperty('--durationInSeconds', settings.durationInSeconds + 's');
+    }
+    if (settings.delayInSeconds != undefined) {
+        root.style.setProperty('--delayInSeconds', settings.delayInSeconds + 's');
+    }
+    if (settings.iterationCount != undefined) {
+        root.style.setProperty('--iterationCount', settings.iterationCount);
+    }
+}

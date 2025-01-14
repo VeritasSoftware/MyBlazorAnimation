@@ -6,6 +6,7 @@ namespace MyBlazorAnimation
         ValueTask DisposeAsync();
         Task HideContentAsync(string id);
         Task TriggerAnimationAsync(string id, string animation);
+        Task SetAnimatePropertesAsync(AnimateSettings settings);
     }
 
     public class AnimationJSLoader : IAsyncDisposable, IAnimationJSLoader
@@ -32,6 +33,12 @@ namespace MyBlazorAnimation
         {
             var module = await _loadJSTask.Value;
             await module.InvokeVoidAsync("hideContent", id);
+        }
+
+        public async Task SetAnimatePropertesAsync(AnimateSettings settings)
+        {
+            var module = await _loadJSTask.Value;
+            await module.InvokeVoidAsync("setAnimatePropertes", settings);
         }
 
         public async ValueTask DisposeAsync()

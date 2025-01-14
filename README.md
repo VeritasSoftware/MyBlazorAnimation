@@ -28,32 +28,15 @@ Then, you can use the provided `Animate` component in your Blazor components.
 
 The supported animations are:
 
-<table border="0">
- <tr>
-    <td>
-<ul>
-<li>bounce</li>
-<li>bounceIn</li>
-<li>fadeIn</li>
-<li>fadeOut</li>
-<li>fadeInOut</li>
-<li>fadeOutIn</li>
-<li>flip</li>
-</ul>
-    </td>
-    <td>
-<ul>
-<li>shake</li>
-<li>slideUp</li>
-<li>slideDown</li>
-<li>slideLeft</li>
-<li>slideRight</li>
-<li>swing</li>
-<li>wobble</li>
-</ul>
-    </td>
- </tr>
-</table>
+|||
+|--|--|
+|bounce|bounceIn|
+|fadeIn|fadeOut|
+|fadeInOut|fadeOutIn|
+|flip|shake|
+|slideUp|slideDown|
+|slideLeft|slideRight|
+|swing|wobble|
 
 Eg. to animate sliding from right to left, you can use the `Animate` component with the `slideLeft` animation.
 
@@ -74,7 +57,7 @@ Set the IterationCount to 1 or more to play the animation only once or more. Def
 
 This animation will fire automatically when the component is rendered.
 
-### Triggering animation manually
+### Triggering animation
 
 If you want to trigger the animation manually in code, you can set the `IsManualTrigger` property to `true`.
 
@@ -107,6 +90,43 @@ For eg. When the Search button is clicked, `OnClick` event is fired. The `Search
 }
 ```
 
+### Triggering animation dynamically
+
+You can use `AnimateSettings` class to set up your animation.
+
+And, call the `TriggerAnimationDynamicAsync` method, to run your animation.
+
+This will reset your running animation, if any. Also, it will set the `isManualTrigger` property to `true`;
+
+```csharp
+public class AnimateSettings
+{
+    public string Animation { get; set; } = "";
+    public double DurationInSeconds { get; set; } = 1;
+    public double DelayInSeconds { get; set; } = 0;
+    public int IterationCount { get; set; } = 1;
+}
+```
+
+```csharp
+@code {
+    private Animate searchResultsAnimation;
+
+    private async Task TriggerAnimationAsync(MouseEventArgs args)
+    {
+        var settings = new AnimateSettings
+        {
+            Animation = Animate.wobble,
+            DelayInSeconds = 0,
+            DurationInSeconds = 3,
+            IterationCount = 1
+        };
+
+        await searchResultsAnimation.TriggerAnimationDynamicAsync(settings);
+    }
+}
+```
+
 ### Animate component properties
 
 | Property | Description |
@@ -118,7 +138,7 @@ For eg. When the Search button is clicked, `OnClick` event is fired. The `Search
 | DelayInSeconds | The delay (in seconds) before the animation starts. Default is 0. Accepts fractions.|
 | OnAnimationTriggered | The event is fired after the animation has been triggered. |
 | IsManualTrigger | Set to true to trigger the animation manually. Default is false. |
-| @ref | Component instance reference to call the `TriggerAnimationBeginAsync`, `TriggerAnimationAsync` & `TriggerAnimationNowAsync` methods. |
+| @ref | Component instance reference to call the `TriggerAnimationBeginAsync`, `TriggerAnimationAsync` , `TriggerAnimationNowAsync` & `TriggerAnimationDynamicAsync` methods. |
 
 
 ## Run any custom industry standard animation

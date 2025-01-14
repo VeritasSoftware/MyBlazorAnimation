@@ -6,10 +6,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>MyBlazorAnimation</Title>
-	<Summary>Blazor library provides commonly used animations. Supports .NET 8/9.</Summary>
-    <Description>Blazor library provides commonly used animations. Supports .NET 8/9.</Description>
+	<Summary>Light-weight Blazor library provides commonly used animations. Run your custom industry standard animations too. Supports .NET 8/9.</Summary>
+    <Description>Light-weight Blazor library provides commonly used animations. Run your custom industry standard animations too. Supports .NET 8/9.</Description>
     <PackageReleaseNotes>Initial release</PackageReleaseNotes>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<Authors>Shantanu</Authors>
 	<Version>1.0.0</Version>
 	<PackageId>MyBlazorAnimation</PackageId>
