@@ -22,7 +22,7 @@ export function hideContent(id) {
     }
 }
 
-export function setAnimatePropertes(settings) {
+export function setAnimateProperties(settings) {
     const root = document.querySelector(':root');
 
     if (settings.durationInSeconds != undefined) {

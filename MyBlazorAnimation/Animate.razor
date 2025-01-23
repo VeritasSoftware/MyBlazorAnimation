@@ -90,15 +90,23 @@
 
     public async Task TriggerAnimationDynamicAsync(AnimateSettings settings)
     {
-        this.ClearAnimation();        
+        this.ClearAnimation();
+        
+        var settingsBase = new AnimateSettingsBase
+        {
+            DelayInSeconds = settings.DelayInSeconds,
+            DurationInSeconds = settings.DurationInSeconds,
+            IterationCount = settings.IterationCount
+        };
 
-        await AnimationJSLoader.SetAnimatePropertesAsync(settings);
+        await AnimationJSLoader.SetAnimatePropertiesAsync(settingsBase);
 
         this.Animation = settings.Animation;
         this.IsManualTrigger = true;
         this.DelayInSeconds = settings.DelayInSeconds;
         this.DurationInSeconds = settings.DurationInSeconds;
         this.IterationCount = settings.IterationCount;
+        this.OnAnimationTriggered = settings.OnAnimationTriggered;
 
         await TriggerAsync();
     }

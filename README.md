@@ -94,32 +94,23 @@ For eg. When the Search button is clicked, `OnClick` event is fired. The `Search
 
 You can use `AnimateSettings` class to set up your animation.
 
-And, call the `TriggerAnimationDynamicAsync` method, to run your animation.
+And, call the `TriggerAnimationDynamicAsync` method using the component reference (`@ref`), to run your animation.
 
 This will reset your running animation, if any. Also, it will set the `isManualTrigger` property to `true`;
-
-```csharp
-public class AnimateSettings
-{
-    public string Animation { get; set; } = "";
-    public double DurationInSeconds { get; set; } = 1;
-    public double DelayInSeconds { get; set; } = 0;
-    public int IterationCount { get; set; } = 1;
-}
-```
 
 ```csharp
 @code {
     private Animate searchResultsAnimation;
 
-    private async Task TriggerAnimationAsync(MouseEventArgs args)
+    private async Task TriggerAnimationDynamicAsync(MouseEventArgs args)
     {
         var settings = new AnimateSettings
         {
             Animation = Animate.wobble,
             DelayInSeconds = 0,
             DurationInSeconds = 3,
-            IterationCount = 1
+            IterationCount = 1,
+            OnAnimationTriggered = async () => Console.WriteLine("Animation Triggered Dynamic")
         };
 
         await searchResultsAnimation.TriggerAnimationDynamicAsync(settings);
