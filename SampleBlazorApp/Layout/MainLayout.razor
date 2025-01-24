@@ -12,17 +12,17 @@
         </div>
 
         <Animate Id="myPageAnimation" 
-        Animation="@Animate.slideLeft" 
-        DurationInSeconds="1" 
-        IterationCount="0"
-        OnAnimationTriggered="@(async () => Console.WriteLine("Animation Triggered"))"
-        @ref=myAnimation>
+            Animation="@Animate.slideLeft" 
+            DurationInSeconds="1" 
+            IterationCount="0"
+            OnAnimationTriggered="@(async () => Console.WriteLine("Animation Triggered"))"
+            @ref=myAnimation>
             <article class="content px-4">
                 @Body
             </article>
         </Animate>
         <br />
-        <button class="btn btn-primary" @onclick="(Func<MouseEventArgs, Task>)TriggerAnimationDynamicAsync">Trigger Animation</button>
+        <button class="btn btn-primary" @onclick="TriggerAnimationDynamicAsync">Trigger Animation</button>
     </main>
 </div>
 @code {
