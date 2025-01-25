@@ -102,14 +102,14 @@ This will reset your running animation, if any. Also, it will set the `isManualT
 @code {
     private Animate searchResultsAnimation;
 
-    private async Task TriggerAnimationDynamicAsync(MouseEventArgs args)
+    private async Task AnimateMe(MouseEventArgs args)
     {
         var settings = new AnimateSettings
         {
             Animation = Animate.wobble,
-            DelayInSeconds = 0,
+            DelayInSeconds = 1,
             DurationInSeconds = 3,
-            IterationCount = 1,
+            IterationCount = 3,
             OnAnimationTriggered = async () => Console.WriteLine("Animation Triggered Dynamic")
         };
 
