@@ -8,13 +8,14 @@
     <Title>MyBlazorAnimation</Title>
 	<Summary>Light-weight Blazor library provides commonly used animations. Run your custom industry standard animations too. Supports .NET 8/9.</Summary>
     <Description>Light-weight Blazor library provides commonly used animations. Run your custom industry standard animations too. Supports .NET 8/9.</Description>
-    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <PackageReleaseNotes>Added some features.</PackageReleaseNotes>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<Authors>Shantanu</Authors>
-	<Version>1.0.0</Version>
+	<Version>1.1.0</Version>
 	<PackageId>MyBlazorAnimation</PackageId>
 	<PackageProjectUrl>https://github.com/VeritasSoftware/MyBlazorAnimation</PackageProjectUrl>
+	<PackageTags>MyBlazorAnimation, blazor, animation, custom animation, dynamic animation</PackageTags>
   </PropertyGroup>
 
     <ItemGroup>
