@@ -4,7 +4,7 @@
 
 ### Run any custom industry standard animation
 
-### Targeting .NET 8/9
+### Targeting .NET 8/9/10
 
 This light-weight Blazor library provides a component to create commonly used animations in Blazor applications.
 

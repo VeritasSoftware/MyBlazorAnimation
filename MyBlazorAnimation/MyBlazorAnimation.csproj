@@ -1,18 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-	<TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+	<TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>MyBlazorAnimation</Title>
 	<Summary>Light-weight Blazor library provides commonly used animations. Run your custom industry standard animations too. Supports .NET 8/9.</Summary>
     <Description>Light-weight Blazor library provides commonly used animations. Run your custom industry standard animations too. Supports .NET 8/9.</Description>
-    <PackageReleaseNotes>Added some features.</PackageReleaseNotes>
+    <PackageReleaseNotes>Added support for .NET 10. Now, .NET 8/9/10 are supported.</PackageReleaseNotes>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<Authors>Shantanu</Authors>
-	<Version>1.1.0</Version>
+	<Version>2.0.0</Version>
 	<PackageId>MyBlazorAnimation</PackageId>
 	<PackageProjectUrl>https://github.com/VeritasSoftware/MyBlazorAnimation</PackageProjectUrl>
 	<PackageTags>MyBlazorAnimation, blazor, animation, custom animation, dynamic animation</PackageTags>
@@ -27,12 +27,16 @@
   </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
-	    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.11" />
+	    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.23" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
-	    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.0" />
+	    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.12" />
     </ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.2" />
+	</ItemGroup>
 
   <ItemGroup>
     <Content Update="wwwroot\animation.js">
